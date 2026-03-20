@@ -28,7 +28,7 @@
                 <Pill v-if="filter.showSelectNoneButton"
                       :active="currentActive.length === 0"
                       :class="{ 'pointer-events-none' : isDragging }"
-                      @click.native="clearFilters()">
+                      @click="clearFilters()">
 
                     {{ filter.noneLabel }}
 
@@ -38,7 +38,7 @@
                       :key="option.value"
                       :class="{ 'pointer-events-none' : isDragging }"
                       :active="currentActive.includes(option.value)"
-                      @click.native="enableFilter(option.value)">
+                      @click="enableFilter(option.value)">
 
                     {{ option.label }}
 
